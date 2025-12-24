@@ -31,6 +31,27 @@ header {
     text-align: center;
 }
 
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.app-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 header h1 {
     font-size: 3rem;
     margin-bottom: 10px;
@@ -45,12 +66,6 @@ header h1 {
 
 .logo-link:hover {
     opacity: 0.8;
-}
-
-.tagline {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    font-weight: 300;
 }
 
 /* Main Content */
@@ -105,6 +120,64 @@ main {
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* App Store Button - Noir et blanc */
+.btn-appstore {
+    background: #000000;
+    color: white;
+    border: 2px solid #000000;
+    flex-direction: row;
+    padding: 12px 24px;
+}
+
+.btn-appstore:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: #1a1a1a;
+}
+
+/* Google Play Button - Fond noir avec logo coloré */
+.btn-googleplay {
+    background: #000000;
+    color: white;
+    border: 2px solid #000000;
+    flex-direction: row;
+    padding: 12px 24px;
+}
+
+.btn-googleplay:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: #1a1a1a;
+}
+
+/* Structure de texte des boutons */
+.btn-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+}
+
+.btn-subtitle {
+    font-size: 0.65rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+.btn-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+/* Logo des stores */
+.store-logo {
+    flex-shrink: 0;
+    object-fit: contain;
 }
 
 /* Features Section */
@@ -228,6 +301,27 @@ footer {
     color: #ccc;
 }
 
+.footer-contact {
+    margin: 15px 0;
+}
+
+.footer-contact p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.footer-contact a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.footer-contact a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
 .copyright {
     color: #999;
     font-size: 0.9rem;
@@ -239,12 +333,13 @@ footer {
         padding: 10px;
     }
 
-    header h1 {
-        font-size: 2rem;
+    .app-logo {
+        width: 60px;
+        height: 60px;
     }
 
-    .tagline {
-        font-size: 1rem;
+    header h1 {
+        font-size: 2rem;
     }
 
     main {
